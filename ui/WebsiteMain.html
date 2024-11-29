@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Monitoring System</title>
+    <link rel="stylesheet" href="WebsiteMain.css">
+</head>
+<body>
+    <img src="download.png" alt="Plant Logo" class="logo">
+    <h1>Plant Monitoring System</h1>
+
+    <!-- Plant Gallery -->
+    <div id="gallery" class="gallery">
+        <div class="plant" onclick="viewPlant('Ashwagandha')">
+            <img src="https://www.centrum.com/sites/g/files/ybldwu136/files/styles/product_tile_image/public/2022-03/ashwagandha.png" alt="Ashwagandha">
+            <div>
+                <h2>Ashwagandha</h2>
+                <p class="status">Loading...</p>
+            </div>
+        </div>
+        <div class="plant" onclick="viewPlant('Mint')">
+            <img src="https://foodieng.com/wp-content/uploads/2022/05/mint-leaf.jpg" alt="Mint">
+            <div>
+                <h2>Mint</h2>
+                <p class="status">Perfect</p>
+            </div>
+        </div>
+        <div class="plant" onclick="viewPlant('Common Herbs')">
+            <img src="https://img.freepik.com/premium-photo/common-sage-isolated-white-background_434193-7374.jpg" alt="Common Herbs">
+            <div>
+                <h2>Common Sage</h2>
+                <p class="status" style="color: red;">Needs Attention</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Plant Data Container -->
+    <div id="data-container">
+        <div class="box">
+            <h2 id="plant-name"></h2>
+            <div class="data">
+                <strong>Temperature:</strong> <span id="temperature">Loading...</span> °C
+            </div>
+            <div class="data">
+                <strong>Humidity:</strong> <span id="humidity">Loading...</span> %
+            </div>
+            <div class="data">
+                <strong>Soil Moisture:</strong> <span id="soil-moisture">Loading...</span>
+            </div>
+            <div class="data">
+                <strong>Light:</strong> <span id="light">Loading...</span>
+            </div>
+            <button class="back-button" onclick="goBack()">Back to Gallery</button>
+        </div>
+
+        <div class="box">
+            <h3>Ideal Environment</h3>
+            <div class="ideal">
+                <strong>Temperature:</strong> <span id="ideal-temperature"></span><br>
+                <strong>Humidity:</strong> <span id="ideal-humidity"></span><br>
+                <strong>Soil Moisture:</strong> <span id="ideal-soil-moisture"></span><br>
+                <strong>Light:</strong> <span id="ideal-light"></span>
+            </div>
+            <p><strong>Fact:</strong> <span id="fact"></span></p>
+        </div>
+    </div>
+
+    <script src="Main.js"></script>
+</body>
+</html>

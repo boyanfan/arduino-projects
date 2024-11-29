@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    background-color: #f0f9f0;
+}
+h1 {
+    color: #4CAF50;
+    text-align: center;
+}
+img.logo {
+    width: 150px;
+    display: block;
+    margin: 20px auto;
+}
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.plant {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    width: 80%;
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+.plant img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+.plant:hover {
+    transform: scale(1.02);
+    background-color: #f9f9f9;
+}
+.status {
+    font-weight: bold;
+    margin-top: 5px;
+}
+#data-container {
+    display: none;
+    margin-top: 20px;
+}
+.box {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.back-button {
+    display: block;
+    margin: 20px auto;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.back-button:hover {
+    background-color: #45a049;
+}
+.data, .ideal {
+    text-align: left;
+    margin: 10px 0;
+    font-size: 18px;
+}
