@@ -144,6 +144,10 @@ bool onRaining();
 // This function transmits the specified content string to the client, allowing the system to 
 // communicate updates or alerts.
 //
+//
+// Template Parameters:
+//   T - The type of the value to be notify (e.g., int, string, etc.).
+//
 // Parameters:
 //   WiFiClient client - The connected Wi-Fi client to which the notification will be sent.
 //   String content    - The message or content to be sent to the client.
@@ -156,7 +160,7 @@ bool onRaining();
 //   - The `content` string should be formatted appropriately for the receiving client (e.g., plain text, JSON, etc.).
 //   - Ensure the client connection is checked before invoking this function to avoid errors.
 //
-void notify(WiFiClient client, String content);
+template<typename T> void notify(WiFiClient client, T content);
 
 // ----------------------------------------------------------------------------------------------------- Constants Definitions
 
@@ -335,6 +339,6 @@ template<typename T> bool test(bool onTest, String testTitle, T value) {
 
 bool onRaining() { return analogRead(RS_PIN) > 500; }
 
-void notify(WiFiClient client, String content) {
-  Serial.println("\n" + content);
+template<typename T> void notify(WiFiClient client, T content) {
+  Serial.println("\n" + String(content));
 }
