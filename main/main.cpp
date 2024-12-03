@@ -95,28 +95,6 @@ template<typename T> int convertToPercentage(T value, T lowerBound, T upperBound
 //
 template<typename T> bool test(bool onTest, String testTitle, T value);
 
-// Function: sendHttpResponse
-//
-// This function handles sending an HTTP response to a connected Wi-Fi client. It reads sensor data,
-// formats the data into a JSON object or HTML content, and sends it back to the client over the Wi-Fi connection.
-//
-// Functionality:
-//   - Reads sensor data from the connected sensors (e.g., temperature, moisture, raindrop sensors).
-//   - Converts the sensor readings into human-readable format (e.g., JSON or HTML).
-//   - Sends the HTTP response headers and the content back to the client.
-//
-// Parameters:
-//   client - A WiFiClient object representing the connected client to which the response will be sent.
-//
-// Returns:
-//   This function does not return a value.
-//
-// Notes:
-//   - Ensure that all sensors are properly connected and initialized before calling this function.
-//   - This function is designed to work as part of a web server implementation.
-//
-void sendHttpResponse(WiFiClient client);
-
 // ----------------------------------------------------------------------------------------------------------------------- API
 
 // Function: onRaining
@@ -161,6 +139,28 @@ bool onRaining();
 //   - Ensure the client connection is checked before invoking this function to avoid errors.
 //
 template<typename T> void notify(WiFiClient client, T content);
+
+// Function: sendHttpResponse
+//
+// This function handles sending an HTTP response to a connected Wi-Fi client. It reads sensor data,
+// formats the data into a JSON object or HTML content, and sends it back to the client over the Wi-Fi connection.
+//
+// Functionality:
+//   - Reads sensor data from the connected sensors (e.g., temperature, moisture, raindrop sensors).
+//   - Converts the sensor readings into human-readable format (e.g., JSON or HTML).
+//   - Sends the HTTP response headers and the content back to the client.
+//
+// Parameters:
+//   client - A WiFiClient object representing the connected client to which the response will be sent.
+//
+// Returns:
+//   This function does not return a value.
+//
+// Notes:
+//   - Ensure that all sensors are properly connected and initialized before calling this function.
+//   - This function is designed to work as part of a web server implementation.
+//
+void sendHttpResponse(WiFiClient client);
 
 // ----------------------------------------------------------------------------------------------------- Constants Definitions
 
